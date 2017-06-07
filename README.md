@@ -1,10 +1,11 @@
 # LabelView
+* 欢迎关注微信公众号、长期为您推荐优秀博文、开源项目、视频
 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-LabelView-brightgreen.svg?style=flat)](https://android-arsenal.com/details/3/1538)
+* 微信公众号名称：Android干货程序员
 
-<br />
+* ![](http://upload-images.jianshu.io/upload_images/4037105-8f737b5104dd0b5d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-Sometimes, we need to show a **label** above an ImageView or any other views. Well, **LabelXXView** will be able to help you. It's easy to implement as well!
+* 项目总贴:https://github.com/open-android/Android
 
 ![](./img/img1.png)
 
@@ -16,9 +17,7 @@ Sometimes, we need to show a **label** above an ImageView or any other views. We
 
 #### Gradle
 
-**Step 1.** Add the JitPack repository to your build file
-
-Add it in your **root build.gradle** at the end of repositories:
+### 第一步：在项目的根目录添build.gradle添加如下代码：
 
 ```
 allprojects {
@@ -31,7 +30,7 @@ allprojects {
 
 <br />
 
-**Step 2.** Add the dependency
+### 第二步：在项目build.gradle文件添加依赖
 
 ```
 dependencies {
@@ -41,23 +40,9 @@ dependencies {
 
 <br />
 
-#### Or Manual
-
-Copy all `java files` and `attr.xml` into your project.
-
-<br />
-
-# Create a Label
 
 
-
-put xml code in you layout, like follows.
-
-
-
-## LabelButtonView
-
-
+## 给Button添加标签(展示出来就是上面蓝色按钮效果)
 
 ```java
 <com.lid.lib.LabelButtonView
@@ -73,33 +58,37 @@ put xml code in you layout, like follows.
     app:label_height="20dp"
     app:label_orientation="RIGHT_TOP"
     app:label_text="HD"
-    app:label_textSize="12sp" />
+    app:label_textSize="12sp"
+    app:label_textStyle="BOLD"/>
 ```
 
 
 
-## LabelImageView
+## 给ImageView添加标签(展示出来就是上面左边图片效果)
 
 
 
 ```
 <com.lid.lib.LabelImageView
-    android:id="@+id/image1"
-    android:layout_width="0dp"
-    android:layout_height="match_parent"
-    android:layout_weight="1"
-    android:scaleType="centerCrop"
-    android:src="@mipmap/image1"
-    app:label_backgroundColor="#C2185B"
-    app:label_orientation="LEFT_TOP"
-    app:label_text="CHINA" />
+                android:id="@+id/image1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/image1"
+                app:label_backgroundColor="#C2185B"
+                app:label_orientation="LEFT_TOP"
+                app:label_text="CHINA"
+                app:label_textStyle="ITALIC"/>
+```
+
+* 如果想展示出来是上面图片右边效果修改属性
+```
+app:label_orientation="RIGHT_TOP"
 ```
 
 
-
-
-
-## LabelTextView
+### 给TextView添加标签(展示出来就是上面文本效果)
 
 
 
@@ -119,21 +108,17 @@ put xml code in you layout, like follows.
     app:label_distance="15dp"
     app:label_orientation="LEFT_TOP"
     app:label_text="POP"
-    app:label_textSize="10sp" />
+    app:label_textSize="10sp"
+    app:label_textStyle="BOLD_ITALIC"/>
 ```
 
+### 给RecyclerView或者ListView添加标签(展示出来就是第二张图片效果)
 
+跟普通的RecyclerView和ListView用法一模一样,就不贴代码了。
 
-
-
-# Parameter Description
+## 自定义标签，代码如下
 
 ![](./img/img2.png)
-
-
-
-# If you need Label in your custom View
-
 
 
 1. create an new view class extends `YourView`
@@ -210,34 +195,4 @@ public class LabelXXXView extends YourView {
         utils.setLabelTextSize(this, textSize);
     }
 }
-```
-
-
-
-
-
-
-
-
-
-# Thanks
-
-- [shaunidiot](https://github.com/shaunidiot) English ReadMe supported
-
-## License
-
-```
-Copyright 2014 linger1216
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
 ```
