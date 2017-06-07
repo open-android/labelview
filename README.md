@@ -13,10 +13,6 @@
 
 
 
-# Import your project
-
-#### Gradle
-
 ### 第一步：在项目的根目录添build.gradle添加如下代码：
 
 ```
@@ -34,7 +30,7 @@ allprojects {
 
 ```
 dependencies {
-	compile 'com.github.linger1216:labelview:v1.1.2'
+	compile 'com.github.open-android:labelview:0.1.0'
 }
 ```
 
